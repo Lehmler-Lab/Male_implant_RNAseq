@@ -7,7 +7,6 @@ output:
 The majority of Library packages are listed here. If you want to include more just install and load at the end of the list. If code isn't recognizing the function, it is likely that R didn't load the package that the function comes from.
 #load libraries every time
 
-
 ```{r include=FALSE}
 install.packages("devtools")
 install.packages("BiocManager")
@@ -19,7 +18,6 @@ BiocManager::install("EnhancedVolcano")
 BiocManager::install("topGO")
 BiocManager::install("org.Rn.eg.db")
 ```
-
 
 #Load libraries
 ```{r include=FALSE}
@@ -57,7 +55,6 @@ setwd("P:/OEH/Faculty/hlehmler/research/Lehmler Group-Amanda Bullert/4-OH-PCB52_
 rn6_ref<-TxDb.Rnorvegicus.UCSC.rn6.refGene
 rn6_ref
 ```
-
 For additional notes reference "https://www.bioconductor.org/help/course-materials/2016/CSAMA/lab-3-rnaseq/rnaseq_gene_CSAMA2016.html"
 
 The following line produces a GRangesList of all the exons grouped by gene (Lawrence et al. 2013). Each element of the list is a GRanges object of the exons for a gene
