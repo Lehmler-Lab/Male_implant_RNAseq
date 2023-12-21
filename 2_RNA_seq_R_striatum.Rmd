@@ -60,7 +60,8 @@ We can now construct a DESeqDataSet object to formulate a starting point for our
 ```{r}
 se1<- se[,se$tissue_type == "striatum"] ##change tissue type here
 #se1<-se1[ , !se1$bam_ID == c("CRBM_S32.bam","CRBM_S3.bam")] #remove specific outliers here
-se1 <- se1[ rowSums(assay(se1)) >= 10, ]
+#se1 <- se1[ rowSums(assay(se1)) >= 100, ]
+se1 <- se1[ rowSums(assay(se1) >= 1) >= 8, ]
 #F_se<-se1[,se1$sex == "F"]
 #M_se<-se1[,se1$sex == "M"]
 #test<-M_se #[ , !se1$animal_ID ==] #remove specific outliers here
